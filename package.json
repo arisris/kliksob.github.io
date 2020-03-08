@@ -1,0 +1,26 @@
+{
+  "name": "kliksob.github.io",
+  "version": "1.0.0",
+  "description": "Kliksob Personal websites",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve -s & parcel watch src/app.js --no-autoinstall --public-url /dist",
+    "build": "parcel build src/app.js --experimental-scope-hoisting --public-url /dist",
+    "upload-site": "git add * && git commit -m \"Update, add or remove some files\" && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kliksob/kliksob.github.io.git"
+  },
+  "author": "Aris Riswanto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kliksob/kliksob.github.io/issues"
+  },
+  "homepage": "https://github.com/kliksob/kliksob.github.io#readme",
+  "dependencies": {
+    "bss": "^1.6.4",
+    "mithril": "^2.0.4"
+  }
+}

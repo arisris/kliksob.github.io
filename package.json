@@ -6,7 +6,7 @@
   "scripts": {
     "start": "serve -s & parcel watch src/app.js --no-autoinstall --public-url /dist",
     "build": "parcel build src/app.js --experimental-scope-hoisting --public-url /dist",
-    "upload-site": "git add * && git commit -m \"Update, add or remove some files\" && git push",
+    "commit-all": "git add * && git commit -m \"Update, add or remove some files\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

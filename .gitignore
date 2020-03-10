@@ -1,6 +1,6 @@
 node_modules/
-src/
 .cache/
 .npmrc
 .yarnrc
 *.lock
+*.map

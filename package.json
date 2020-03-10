@@ -21,6 +21,10 @@
   "homepage": "https://github.com/kliksob/kliksob.github.io#readme",
   "dependencies": {
     "bss": "^1.6.4",
-    "mithril": "^2.0.4"
+    "mithril": "^2.0.4",
+    "spectre.css": "^0.5.8"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
   }
 }

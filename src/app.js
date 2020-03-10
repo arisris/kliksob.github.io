@@ -1,7 +1,8 @@
 import m from "mithril";
 import routes from "./routes";
-import "./global.style.js";
-
+import "spectre.css/dist/spectre.css";
+import "spectre.css/dist/spectre-exp.css";
+import "spectre.css/dist/spectre-icons.css";
 const pages = {};
 Object.keys(routes).forEach(key => {
   pages[key] = {
@@ -13,7 +14,7 @@ Object.keys(routes).forEach(key => {
     render(v) {
       return v;
     }
-  }
+  };
 });
 
 m.route.prefix = "";

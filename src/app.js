@@ -1,8 +1,7 @@
 import m from "mithril";
 import routes from "./routes";
-import "spectre.css/dist/spectre.css";
-import "spectre.css/dist/spectre-exp.css";
-import "spectre.css/dist/spectre-icons.css";
+import "./styles";
+
 const pages = {};
 Object.keys(routes).forEach(key => {
   pages[key] = {

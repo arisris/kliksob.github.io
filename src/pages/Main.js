@@ -1,6 +1,7 @@
 import { m, route } from "mithril";
 import b from "bss";
 import Layout from "./Layout";
+import logo from "../assets/kliksob-bullet.png";
 
 export default {
   count: 0,
@@ -10,15 +11,14 @@ export default {
   },
   view({ state }) {
     return m(Layout, {}, [
-      m("h3", "Hello World"),
-      m("p", "This site will coming soon"),
-      m("p", m(route.Link, {
-        href: "/toError"
-      }, "To Error"))
-      /*m("h5", "Add List"),
-      [...new Array(1)].map((i, k) => {
-        return m("p", "Say Hello "+k)
-      })*/
+      m(".hero.hero-lg.bg-gray", [
+        m(".hero-body.text-center", [
+          m("img"+b.w(120).h(120), {
+            src: logo
+          }),
+          m("h1", "Hello :)")
+        ])
+      ])
     ])
   }
 }

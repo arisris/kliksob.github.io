@@ -4,8 +4,8 @@
   "description": "Kliksob Personal websites",
   "main": "index.js",
   "scripts": {
-    "start": "serve -s & parcel watch src/app.js --no-autoinstall --public-url /dist",
-    "build": "parcel build src/app.js --experimental-scope-hoisting --public-url /dist",
+    "start": "rm -rf dist && serve -s & parcel watch src/app.js --no-autoinstall --public-url /dist",
+    "build": "rm -rf dist && parcel build src/app.js --experimental-scope-hoisting --public-url /dist",
     "commit-all": "git add * && git commit -m \"Update, add or remove some files\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

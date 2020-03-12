@@ -1,4 +1,4 @@
-import m from "mithril";
+import { m, route } from "mithril";
 import b from "bss";
 import Layout from "./Layout";
 import faTired from "famicon/dist/regular/faTired";
@@ -13,7 +13,7 @@ export default {
       m("p.empty-subtitle", "The Page You are requested not found on our sites"),
       m(".empty-action", [
         m("button.btn.btn-link", {
-          onclick: () => m.route.set("/")
+          onclick: () => route.set("/")
         }, "Home")
       ])
     ]))

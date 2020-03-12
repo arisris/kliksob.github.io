@@ -1,4 +1,4 @@
-import m from "mithril";
+import { m, route } from "mithril";
 import routes from "./routes";
 import "./styles";
 
@@ -16,8 +16,8 @@ Object.keys(routes).forEach(key => {
   };
 });
 
-m.route.prefix = "";
-m.route(document.body, "/", pages);
+//route.prefix = "#!";
+route(document.body, "/", pages);
 
 if (module.hot) {
   //module.hot.accept();

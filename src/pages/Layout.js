@@ -1,9 +1,10 @@
-import m from "mithril";
+import { m } from "mithril";
 import b from "bss";
 import faGithubSquare from "famicon/dist/brands/faGithubSquare";
 
 export default {
-  view({ children }) {
+  sideActive: false,
+  view({ children, state }) {
     return [
       m("header"+b`
         height 60px
@@ -21,7 +22,12 @@ export default {
         background rgba(87, 85, 217, 0.03)
         left 0
       `), [
-        m("a.btn.btn-link.btn-action[href=#]", m("i.icon.icon-menu")),
+        m("a.btn.btn-link.btn-action[href=#]", {
+          onclick: e => {
+            e.preventDefault();
+            state.sideActive = !state.sideActive;
+          }
+        }, m("i.icon.icon-menu")),
         m(""+b`
           display flex
           width 240
@@ -30,14 +36,15 @@ export default {
           m("a[href=https://github.com/kliksob][target=_blank].btn.btn-link", m("i.famicon", m(faGithubSquare)))
         ])
       ]),
-      m("aside.menu"+b`
-        display none
-        position absolute
+      m("aside.menu#main-menu"+b`
+        ${state.sideActive?"display block":"display none"}
+        position fixed
         top 60
-        bottom 5
-        z-index 100
+        min-height 100%
+        transform translateY(0px)
+        z-index 99
       `, [...new Array(4)].map((v, i) => {
-          return m("li.menu-item", m("a[href=#]", "Menu "+i))
+          return m("li.menu-item", m("a.text-primary[href=#]", "Menu "+i))
       })),
       m("main.container"+b`
         margin-top 60px
